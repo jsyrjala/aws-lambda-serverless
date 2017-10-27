@@ -1,6 +1,7 @@
 # aws-lambda-serverless
 
-A Leiningen template for FIXME.
+A Leiningen template for creating a [AWS Lambda](https://aws.amazon.com/lambda/) 
+that gets deployed with [Serverless](https://serverless.com/).
 
 ## Usage
 
