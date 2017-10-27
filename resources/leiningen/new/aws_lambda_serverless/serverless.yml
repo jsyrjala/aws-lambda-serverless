@@ -9,7 +9,7 @@ provider:
   versionFunctions: false
 
 package:
-  artifact: ../target/{{name}}-0.1.0-SNAPSHOT-standalone.jar
+  artifact: target/{{name}}-0.1.0-SNAPSHOT-standalone.jar
 
 functions:
   myFunction:
