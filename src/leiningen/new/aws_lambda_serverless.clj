@@ -13,4 +13,5 @@
     (->files data
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]
+             ["resources/logback.xml" (render "logback.xml" data)]
              ["src/{{sanitized}}/handler.clj" (render "handler.clj" data)])))
