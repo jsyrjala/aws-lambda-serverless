@@ -34,6 +34,7 @@ AWS Lambdas are managed with [Serverless](https://serverless.com/) framework.
 Creating stack
 ```
 npm i -g serverless
+lein uberjar
 cd serverless
 serverless deploy -v --stack dev
 ```
