@@ -42,3 +42,4 @@ TODO
 
 # TODO 
 - Add log rotation for CloudWatch log to serverless.yml
+- Use Serverless' stage instead of --stack parameter

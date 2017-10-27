@@ -14,4 +14,8 @@
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]
              ["resources/logback.xml" (render "logback.xml" data)]
-             ["src/{{sanitized}}/handler.clj" (render "handler.clj" data)])))
+             ["src/{{sanitized}}/handler.clj" (render "handler.clj" data)]
+             ["serverless/serverless.yml" (render "serverless/serverless.yml" data)]
+             ["serverless/dev.yml" (render "serverless/dev.yml" data)]
+             ["serverless/prod.yml" (render "serverless/prod.yml" data)]
+             )))
