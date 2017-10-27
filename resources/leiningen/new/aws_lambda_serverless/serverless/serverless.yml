@@ -1,0 +1,22 @@
+service: {{name}}-${opt:stack}
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: java8
+  region: eu-central-1
+  versionFunctions: false
+
+package:
+  artifact: ../target/{{name}}-0.1.0-SNAPSHOT-standalone.jar
+
+functions:
+  myFunction:
+    description: FIXME Lambda to do XXX
+    memorySize: 512 # Max allowed memory in MB
+    timeout: 300 # Max allowed runtime in seconds
+    name: {{name}}-${opt:stack}
+    handler: {{name}}.handler::handler
+    environment:
+      SOME_ENV: ${file(${opt:stack}.yml):someEnv}
