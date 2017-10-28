@@ -35,7 +35,6 @@ Creating stack
 ```
 npm i -g serverless
 lein uberjar
-cd serverless
 serverless deploy -v --stack dev
 ```
 
