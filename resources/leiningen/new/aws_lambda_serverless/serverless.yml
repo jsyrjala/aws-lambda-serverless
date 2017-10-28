@@ -1,3 +1,5 @@
+# https://serverless.com/framework/docs/providers/aws/guide/serverless.yml/
+
 service: {{name}}-${opt:stack}
 
 frameworkVersion: ">=1.2.0 <2.0.0"
@@ -5,6 +7,7 @@ frameworkVersion: ">=1.2.0 <2.0.0"
 provider:
   name: aws
   runtime: java8
+  # role: TODO add role
   region: eu-central-1
   versionFunctions: false
 
@@ -20,3 +23,11 @@ functions:
     handler: {{name}}.handler::handler
     environment:
       SOME_ENV: ${file(${opt:stack}.yml):someEnv}
+
+resources:
+  Resources:
+    # Delete CloudWatch logs after 30 days
+    WriteDashPostLogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        RetentionInDays: "30"
