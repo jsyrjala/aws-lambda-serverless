@@ -1,4 +1,4 @@
-(ns {{name}}.util
+(ns {{name}}.lambda-util
   (:import [java.util.jar Manifest]))
 
 (defn manifest-version

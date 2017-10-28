@@ -1,7 +1,7 @@
 (ns {{name}}.handler
   "FIXME AWS Lambda to do XXX"
   (:require [clojure.tools.logging :as log]
-            [{{name}}.util :as util])
+            [{{name}}.lambda-util :as lambda-util])
   (:import [java.io InputStream OutputStream]
            [java.util UUID])
   (:gen-class
@@ -27,7 +27,7 @@
   "Business happens here"
   [execute-fn ^InputStream input ^OutputStream output]
   (try
-    (log/info "Starting {{name}}" (or (util/manifest-version) ""))
+    (log/info "Starting {{name}}" (or (lambda-util/manifest-version) ""))
     (swap! start-counter inc)
     (log/info "Lambda instance" instance-id "has been invoked" @start-counter "times including current invocation.")
 
