@@ -1,0 +1,24 @@
+#!/usr/bin/env bash -e
+# - Create the template
+# - Create a project based on the template
+# - Build the project
+# - Run uberjar
+
+echo lein jar
+lein jar
+
+cd target
+
+echo
+echo lein new aws-lambda-serverless my-project
+lein new aws-lambda-serverless my-project
+
+cd my-project
+
+echo
+echo lein uberjar
+lein uberjar
+
+echo
+echo java -jar target/my-project-0.1.0-SNAPSHOT-standalone.jar
+java -jar target/my-project-0.1.0-SNAPSHOT-standalone.jar
