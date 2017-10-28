@@ -2,12 +2,23 @@
 
 [![Build Status](https://travis-ci.org/jsyrjala/aws-lambda-serverless.svg?branch=master)](https://travis-ci.org/jsyrjala/aws-lambda-serverless)
 
-A Leiningen template for creating a [AWS Lambda](https://aws.amazon.com/lambda/) 
+A [Leiningen](https://leiningen.org/) template for creating a [AWS Lambda](https://aws.amazon.com/lambda/) 
 that gets deployed with [Serverless](https://serverless.com/).
+
+## Functionality 
+`aws-lambda-serverless` template creates a Clojure project that is suitable for creating 
+an AWS Lambda function with a Serverless template for deploying the AWS Lambda function 
+easily. 
+
+The template sets up [Logback](https://logback.qos.ch/) based logging via 
+[org.clojure/tools.logging](https://github.com/clojure/tools.logging).
+
+The logs are stored to [Amazon CloudWatch](https://aws.amazon.com/cloudwatch) by 
+default with 30 days retention.
 
 ## Usage
 
-This template is not yet published to [clojars](https://clojars.org)
+This template is not yet published to [Clojars](https://clojars.org)
 
 For now use following to create projects
 
@@ -19,7 +30,6 @@ cd target
 lein new aws-lambda-serverless my-project
 cd my-project
 ```
-
 
 ## License
 

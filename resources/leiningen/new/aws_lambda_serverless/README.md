@@ -27,6 +27,11 @@ You can test function locally:
 lein run
 ```
 
+You can give input (AWS events) via `stdin`.
+```
+lein run < event.json
+```
+
 ### Serverless
 
 AWS Lambdas are managed with [Serverless](https://serverless.com/) framework.
@@ -38,8 +43,10 @@ lein uberjar
 serverless deploy -v --stack dev
 ```
 
-TODO
+## CloudWatch
+
+CloudWatch logs are automatically removed after 30 days. 
+See [serverless.yml](./serverless.yml) for more details.
 
 # TODO 
-- Add log rotation for CloudWatch log to serverless.yml
 - Use Serverless' stage instead of --stack parameter
