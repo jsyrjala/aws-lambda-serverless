@@ -13,7 +13,7 @@
     (->files data
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]
-             ["resources/logback.xml" (render "logback.xml" data)]
+             ["resources/logback.xml" (render "resources/logback.xml" data)]
              ["src/{{sanitized}}/handler.clj" (render "src/handler.clj" data)]
              ["src/{{sanitized}}/lambda_util.clj" (render "src/lambda_util.clj" data)]
              ["serverless.yml" (render "serverless.yml" data)]
