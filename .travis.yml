@@ -1,2 +1,2 @@
 language: clojure
-script: lein jar
+script: sh test-template.sh
