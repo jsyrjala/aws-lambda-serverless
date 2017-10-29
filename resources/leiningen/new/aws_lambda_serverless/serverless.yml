@@ -15,14 +15,23 @@ package:
   artifact: target/{{name}}-0.1.0-SNAPSHOT-standalone.jar
 
 functions:
-  myFunction:
+  func1:
     description: FIXME Lambda to do XXX
     memorySize: 512 # Max allowed memory in MB
     timeout: 300 # Max allowed runtime in seconds
     name: {{name}}-${opt:stack}
-    handler: {{name}}.handler::handler
+    handler: {{name}}.handler::func1
     environment:
-      SOME_ENV: ${file(${opt:stack}.yml):someEnv}
+      SOME_ENV: ${file(serverless/${opt:stack}.yml):someEnv}
+
+  func2:
+    description: FIXME Lambda to do XXX
+    memorySize: 512 # Max allowed memory in MB
+    timeout: 300 # Max allowed runtime in seconds
+    name: {{name}}-${opt:stack}
+    handler: {{name}}.handler::func2
+    environment:
+      SOME_ENV: ${file(serverless/${opt:stack}.yml):someEnv}
 
 resources:
   Resources:
