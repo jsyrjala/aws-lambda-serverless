@@ -36,7 +36,15 @@ functions:
 resources:
   Resources:
     # Delete CloudWatch logs after 30 days
-    WriteDashPostLogGroup:
+    #
+    # Must refer to function's LogGroups using normalizedFunctionName
+    # See https://serverless.com/framework/docs/providers/aws/guide/resources#aws-cloudformation-resource-reference
+    # You can also look into ./serverless/cloudformation-template-update-stack.json
+    Func1LogGroup:
+      Type: AWS::Logs::LogGroup
+      Properties:
+        RetentionInDays: "30"
+    Func2LogGroup:
       Type: AWS::Logs::LogGroup
       Properties:
         RetentionInDays: "30"
