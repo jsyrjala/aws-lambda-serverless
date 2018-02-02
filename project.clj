@@ -1,6 +1,8 @@
 (defproject aws-lambda-serverless/lein-template "0.1.0-SNAPSHOT"
-  :description "AWS Lambda to do FIXME"
-  :url "http://example.com/FIXME"
+  :description "Leiningen template for generating AWS Lambdas"
+  :url "https://github.com/jsyrjala/aws-lambda-serverless"
+  :scm {:name "git"
+        :url "https://github.com/jsyrjala/aws-lambda-serverless"}
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :eval-in-leiningen true)
