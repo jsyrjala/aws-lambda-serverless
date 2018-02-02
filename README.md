@@ -31,6 +31,9 @@ lein new aws-lambda-serverless my-project
 cd my-project
 ```
 
+# TODO 
+- Use Serverless' stage instead of --stack parameter
+
 ## License
 
 Copyright © 2017 Juha Syrjälä
