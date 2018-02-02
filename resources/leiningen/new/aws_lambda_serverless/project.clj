@@ -2,7 +2,7 @@
   :description "AWS Lambda to do FIXME"
   :url "http://example.com/FIXME"
 
-  :dependencies [[org.clojure/clojure "1.8.0"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
 
                  [org.clojure/tools.logging "0.3.1"]
                  [ch.qos.logback/logback-classic "1.2.3"]
