@@ -1,6 +1,6 @@
 # aws-lambda-serverless
 
-[![Build Status](https://travis-ci.org/jsyrjala/aws-lambda-serverless.svg?branch=master)](https://travis-ci.org/jsyrjala/aws-lambda-serverless)
+[![Build Status](https://travis-ci.org/jsyrjala/aws-lambda-serverless.svg?branch=master)](https://travis-ci.org/jsyrjala/aws-lambda-serverless) [![Clojars Project](https://img.shields.io/clojars/v/aws-lambda-serverless/lein-template.svg)](https://clojars.org/aws-lambda-serverless/lein-template)
 
 A [Leiningen](https://leiningen.org/) template for creating a [AWS Lambda](https://aws.amazon.com/lambda/) 
 that gets deployed with [Serverless](https://serverless.com/).
