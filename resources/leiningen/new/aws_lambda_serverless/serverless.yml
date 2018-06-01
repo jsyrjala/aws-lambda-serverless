@@ -9,7 +9,6 @@ provider:
   runtime: java8
   # role: TODO add role
   region: eu-central-1
-  versionFunctions: false
 
 package:
   artifact: target/{{name}}-0.1.0-SNAPSHOT-standalone.jar
