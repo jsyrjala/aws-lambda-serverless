@@ -28,10 +28,7 @@ lein new aws-lambda-serverless my-project
 
 ## License
 
-Copyright © 2017 Juha Syrjälä
+Copyright © 2017-2018 Juha Syrjälä
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
-
-# TODO 
-- Use Serverless' stage instead of --stack parameter

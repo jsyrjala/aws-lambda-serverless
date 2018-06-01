@@ -1,6 +1,6 @@
 # https://serverless.com/framework/docs/providers/aws/guide/serverless.yml/
 
-service: {{name}}-${opt:stack}
+service: {{name}}
 
 frameworkVersion: ">=1.2.0 <2.0.0"
 
@@ -19,19 +19,19 @@ functions:
     description: FIXME Lambda to do XXX
     memorySize: 512 # Max allowed memory in MB
     timeout: 300 # Max allowed runtime in seconds
-    name: {{name}}-func1-${opt:stack}
+    name: {{name}}-func1
     handler: {{sanitized}}.handler::func1
     environment:
-      SOME_ENV: ${file(serverless/${opt:stack}.yml):someEnv}
+      SOME_ENV: ${file(serverless/${opt:stage}.yml):someEnv}
 
   func2:
     description: FIXME Lambda to do XXX
     memorySize: 512 # Max allowed memory in MB
     timeout: 300 # Max allowed runtime in seconds
-    name: {{name}}-func2-${opt:stack}
+    name: {{name}}-func2
     handler: {{sanitized}}.handler::func2
     environment:
-      SOME_ENV: ${file(serverless/${opt:stack}.yml):someEnv}
+      SOME_ENV: ${file(serverless/${opt:stage}.yml):someEnv}
 
 resources:
   Resources:

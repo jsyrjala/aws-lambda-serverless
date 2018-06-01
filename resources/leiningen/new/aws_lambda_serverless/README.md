@@ -40,7 +40,7 @@ Creating stack
 ```
 npm i -g serverless
 lein uberjar
-serverless deploy -v --stack dev
+serverless deploy -v --stage dev
 ```
 
 ## CloudWatch

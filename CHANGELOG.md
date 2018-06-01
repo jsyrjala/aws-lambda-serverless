@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. This change
 ## [Unreleased]
 ### Changed
 - Documentation updates
-
+- `--stack` parameter replaced with Serverless' `--stage` parameter
 
 ## 0.1.0 - 2018-02-02
 ### Added
