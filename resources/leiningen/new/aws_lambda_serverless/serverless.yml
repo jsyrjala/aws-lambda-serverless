@@ -8,7 +8,7 @@ provider:
   name: aws
   runtime: java8
   # role: TODO add role
-  region: eu-central-1
+  region: eu-central-1 # TODO make sure this is the region you want
 
 package:
   artifact: target/{{name}}-0.1.0-SNAPSHOT-standalone.jar
