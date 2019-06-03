@@ -9,7 +9,7 @@
     </appender>
 
     <!-- main application -->
-    <logger name="{{name}}" level="info"/>
+    <logger name="{{name}}" level="debug"/>
 
     <root level="info">
         <appender-ref ref="STDOUT" />
