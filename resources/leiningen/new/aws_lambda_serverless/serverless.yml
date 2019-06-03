@@ -21,7 +21,7 @@ functions:
     name: {{name}}-func1
     handler: {{sanitized}}.handler::func1
     environment:
-      SOME_ENV: ${file(serverless/${opt:stage}.yml):someEnv}
+      SOME_ENV: ${file(${opt:stage}.yml):someEnv}
 
   func2:
     description: FIXME Lambda to do XXX
@@ -30,7 +30,7 @@ functions:
     name: {{name}}-func2
     handler: {{sanitized}}.handler::func2
     environment:
-      SOME_ENV: ${file(serverless/${opt:stage}.yml):someEnv}
+      SOME_ENV: ${file(${opt:stage}.yml):someEnv}
 
 resources:
   Resources:

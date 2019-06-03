@@ -17,6 +17,6 @@
              ["src/{{sanitized}}/handler.clj" (render "src/handler.clj" data)]
              ["src/{{sanitized}}/lambda_util.clj" (render "src/lambda_util.clj" data)]
              ["serverless.yml" (render "serverless.yml" data)]
-             ["serverless/dev.yml" (render "serverless/dev.yml" data)]
-             ["serverless/prod.yml" (render "serverless/prod.yml" data)]
+             ["dev.yml" (render "dev.yml" data)]
+             ["prod.yml" (render "prod.yml" data)]
              )))
