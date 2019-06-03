@@ -13,7 +13,7 @@
   []
   (let [^java.lang.ClassLoader class-loader (.getClassLoader (class manifest-version))
         ;; this causes reflection warning, but works
-        ^java.net.URL url (.findResource class-loader "META-INF/MANIFEST.MF")
+        ^java.net.URL url (.getResource class-loader "META-INF/MANIFEST.MF")
         manifest (when url (new Manifest (.openStream url)))
         attributes (when manifest (.getMainAttributes manifest))]
     (when attributes
