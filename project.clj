@@ -1,4 +1,4 @@
-(defproject aws-lambda-serverless/lein-template "1.1.0-SNAPSHOT"
+(defproject aws-lambda-serverless/lein-template "1.1.0"
   :description "Leiningen template for generating AWS Lambdas"
   :url "https://github.com/jsyrjala/aws-lambda-serverless"
   :scm {:name "git"
