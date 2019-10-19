@@ -13,6 +13,8 @@
     (->files data
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]
+             [".gitignore" (render "gitignore" data)]
+             [".hgignore" (render "hgignore" data)]
              ["CHANGELOG.md" (render "CHANGELOG.md" data)]
              ["resources/logback.xml" (render "resources/logback.xml" data)]
              ["src/{{sanitized}}/handler.clj" (render "src/handler.clj" data)]
