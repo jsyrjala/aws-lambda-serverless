@@ -16,10 +16,14 @@
              [".gitignore" (render "gitignore" data)]
              [".hgignore" (render "hgignore" data)]
              ["CHANGELOG.md" (render "CHANGELOG.md" data)]
-             ["resources/logback.xml" (render "resources/logback.xml" data)]
-             ["src/{{sanitized}}/handler.clj" (render "src/handler.clj" data)]
-             ["src/{{sanitized}}/lambda_util.clj" (render "src/lambda_util.clj" data)]
              ["serverless.yml" (render "serverless.yml" data)]
              ["dev.yml" (render "dev.yml" data)]
              ["prod.yml" (render "prod.yml" data)]
+
+             ["resources/logback.xml" (render "resources/logback.xml" data)]
+
+             ["src/{{sanitized}}/handler.clj" (render "src/handler.clj" data)]
+             ["src/{{sanitized}}/lambda_util.clj" (render "src/lambda_util.clj" data)]
+
+             ["test/{{sanitized}}/handler_test.clj" (render "test/handler_test.clj" data)]
              )))

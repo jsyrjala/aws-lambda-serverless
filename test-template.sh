@@ -16,6 +16,10 @@ lein new aws-lambda-serverless my-project
 cd my-project
 
 echo
+echo "lein test (tests will fail)"
+lein test
+
+echo
 echo lein uberjar
 lein uberjar
 
@@ -26,3 +30,6 @@ java -jar target/my-project-0.1.0-SNAPSHOT-standalone.jar func1
 echo
 echo java -jar target/my-project-0.1.0-SNAPSHOT-standalone.jar func2
 java -jar target/my-project-0.1.0-SNAPSHOT-standalone.jar func2
+
+echo Test done
+echo See target/my-project

@@ -11,7 +11,8 @@ the conventions of [keepachangelog.com](http://keepachangelog.com/).
   - CHANGELOG.md
   - .gitignore
   - .hgiginore
-
+- Add a dummy failing unit test
+  
 ## [1.1.0] - 2019-06-04
 ### Changed
 - `dev.yml` and `prod.yml` are moved to the root
