@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file. This change
 the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
 ## [Unreleased]
+- Update dependencies
+  - clojure 1.10.1
+  - slf4j 1.7.28
+  - tools.logging 0.5.0
 
 ## [1.1.0] - 2019-06-04
 ### Changed
