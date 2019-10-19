@@ -1,6 +1,7 @@
 (ns {{name}}.handler-test
-  (:require [clojure.test :refer :all]
-            [{{name}}.handler :refer :all]))
+  (:require
+    [clojure.test :refer :all]
+    [{{name}}.handler :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

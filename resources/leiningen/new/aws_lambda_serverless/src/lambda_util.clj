@@ -1,12 +1,16 @@
 (ns {{name}}.lambda-util
   "Utility code for AWS Lambda"
-  (:require [clojure.tools.logging :as log]
-            [clojure.string :as string]
-            [clojure.main :refer [demunge]]
+  (:require
+    [clojure.java.io :as jio]
+    [clojure.main :refer [demunge]]
+    [clojure.string :as string]
+    [clojure.tools.logging :as log]
+    [cheshire.core :as json]
     )
-  (:import [java.io InputStream OutputStream]
-           [java.util UUID]
-           [java.util.jar Manifest])
+  (:import
+    [java.io InputStream OutputStream]
+    [java.util UUID]
+    [java.util.jar Manifest])
   )
 
 (defn manifest-version
@@ -34,8 +38,44 @@
             (re-find #"(.+)@" $))
         (last $)))
 
-(defn lambda-handler
-  "Logging etc around lambda function"
+
+(defn parse-json
+  "Read input stream and parse it eagerly as JSON"
+  [input-stream]
+  (json/parse-stream-strict (jio/reader input-stream) true))
+
+
+(defn write-json
+  "Serialize output-data to JSON and write it to output-stream.
+  Also logs output data."
+  [output-data output-stream]
+  (log/info "Result: " (json/generate-string output-data))
+  (json/generate-stream output-data (jio/writer output-stream)))
+
+
+(defn lambda-json-handler
+  "Wrapper that parses input as JSON and writes output to JSON.
+  Assumes that execute-fn takes one arg and returns response as Clojure datastructure
+  that can be written as JSON."
+  [execute-fn ^InputStream input-stream ^OutputStream output-stream]
+  (try
+    (let [execute-fn-name (fn-name execute-fn)
+          version (or (manifest-version) "N/A")
+          _ (swap! start-counter inc)
+          _ (log/info (str "Starting function " execute-fn-name " version: " version
+                           "  invoke count: " @start-counter
+                           "  instanceId: " instance-id))
+          output-data (execute-fn (parse-json input-stream))]
+
+      (write-json output-data output-stream)
+
+      (log/info "Lambda successful" output-data))
+    (catch Exception ex
+      (log/error ex "Lambda failed")
+      (throw ex))))
+
+(defn lambda-raw-handler
+  "Wrapper that passes raw input and ouput streams to execute-fn"
   [execute-fn ^InputStream input ^OutputStream output]
   (try
     (let [execute-fn-name (fn-name execute-fn)
@@ -49,10 +89,9 @@
       (log/info "Lambda successful")
       )
     (catch Exception ex
-      (log/error "Lambda failed:" (.getMessage ex))
-      (throw ex))
-    (finally
-      (log/info "Lambda finishing."))) )
+      (log/error ex "Lambda failed:")
+      (throw ex))))
+
 
 (defn main-handler [handler-fns args]
   (when (< (count args) 1)
@@ -62,6 +101,6 @@
     (when-not handler-fn
       (throw (new Exception (str "Wrong arg. Use one of " (vec (map name (keys handler-fns)))))))
     (try
-      (lambda-handler handler-fn System/in System/out)
+      (handler-fn System/in System/out)
       (finally
         (shutdown-agents)))))

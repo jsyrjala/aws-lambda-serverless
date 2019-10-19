@@ -25,7 +25,7 @@ lein uberjar
 
 echo
 echo java -jar target/my-project-0.1.0-SNAPSHOT-standalone.jar func1
-java -jar target/my-project-0.1.0-SNAPSHOT-standalone.jar func1
+echo '{"data": "owls are not what they seem"}' | java -jar target/my-project-0.1.0-SNAPSHOT-standalone.jar func1
 
 echo
 echo java -jar target/my-project-0.1.0-SNAPSHOT-standalone.jar func2
