@@ -7,8 +7,13 @@ frameworkVersion: ">=1.2.0 <2.0.0"
 provider:
   name: aws
   runtime: java8
-  # role: TODO add role
   region: ${env:AWS_DEFAULT_REGION, 'eu-central-1'}
+  iamRoleStatements:
+    ## TODO add permissions
+    # - Effect: Allow
+    #   Action: s3:GetObject
+    #   Resource:
+    #     - "arn:aws:s3:::my-bucket-somewhere/*"
 
 package:
   artifact: target/{{name}}-0.1.0-SNAPSHOT-standalone.jar
