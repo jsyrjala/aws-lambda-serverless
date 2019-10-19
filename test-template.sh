@@ -10,8 +10,8 @@ lein jar
 cd target
 
 echo
-echo lein new aws-lambda-serverless my-project
-lein new aws-lambda-serverless my-project
+echo lein new aws-lambda-serverless com.acme-foo/my-project
+lein new aws-lambda-serverless com.acme-foo/my-project
 
 cd my-project
 

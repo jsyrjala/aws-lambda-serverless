@@ -1,4 +1,4 @@
-# {{name}}
+# {{raw-name}}
 
 AWS Lambda function for XXX
 

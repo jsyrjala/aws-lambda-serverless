@@ -1,4 +1,4 @@
-(defproject {{name}} "0.1.0-SNAPSHOT"
+(defproject {{raw-name}} "0.1.0-SNAPSHOT"
   :description "AWS Lambda to do FIXME"
   :url "http://example.com/FIXME"
 
@@ -21,5 +21,5 @@
                        }
              }
 
-  :main {{name}}.handler
+  :main {{namespace}}.handler
 )

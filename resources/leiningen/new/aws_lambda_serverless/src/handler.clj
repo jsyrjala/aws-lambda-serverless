@@ -1,7 +1,7 @@
-(ns {{name}}.handler
+(ns {{namespace}}.handler
   "FIXME AWS Lambda to do XXX"
   (:require
-    [{{name}}.lambda-util :as lambda-util])
+    [{{namespace}}.lambda-util :as lambda-util])
   (:import
     [java.io InputStream OutputStream])
   (:gen-class

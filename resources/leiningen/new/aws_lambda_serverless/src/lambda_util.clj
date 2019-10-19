@@ -1,4 +1,4 @@
-(ns {{name}}.lambda-util
+(ns {{namespace}}.lambda-util
   "Utility code for AWS Lambda"
   (:require
     [clojure.java.io :as jio]

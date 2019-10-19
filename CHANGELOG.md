@@ -10,6 +10,7 @@ the conventions of [keepachangelog.com](http://keepachangelog.com/).
   - .gitignore
   - .hgiginore
 - Added `lambda-util/lambda-json-handler` to handle JSON formatted requests and responses
+- Add support for qualified project names `lein new aws-lambda-serverless com.acme-foo/my-project` 
 
 ### Changed
 - Update dependencies

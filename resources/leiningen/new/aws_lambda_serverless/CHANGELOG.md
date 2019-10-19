@@ -1,4 +1,4 @@
-# Changelog for {{name}}
+# Changelog for {{raw-name}}
 
 All notable changes to this project will be documented in this file.
 
