@@ -13,6 +13,7 @@
     (->files data
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]
+             ["CHANGELOG.md" (render "CHANGELOG.md" data)]
              ["resources/logback.xml" (render "resources/logback.xml" data)]
              ["src/{{sanitized}}/handler.clj" (render "src/handler.clj" data)]
              ["src/{{sanitized}}/lambda_util.clj" (render "src/lambda_util.clj" data)]
