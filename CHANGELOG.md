@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file. This change
 the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
 ## [Unreleased]
+
+## [1.1.0] - 2019-06-04
 ### Changed
 - `dev.yml` and `prod.yml` are moved to the root
 - Updated dependencies: clojure 1.10.0, slf4j 1.7.26
@@ -21,6 +23,7 @@ the conventions of [keepachangelog.com](http://keepachangelog.com/).
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/jsyrjala/aws-lambda-serverless/compare/1.0.1...HEAD
+[Unreleased]: https://github.com/jsyrjala/aws-lambda-serverless/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/jsyrjala/aws-lambda-serverless/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/jsyrjala/aws-lambda-serverless/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/jsyrjala/aws-lambda-serverless/compare/0.1.0...1.0.0
