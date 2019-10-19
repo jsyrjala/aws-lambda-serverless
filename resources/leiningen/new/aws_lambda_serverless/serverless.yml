@@ -18,7 +18,7 @@ custom:
 
 functions:
   func1:
-    description: FIXME Lambda to do XXX
+    description: FIXME Lambda to do XXX (${opt:stage})
     memorySize: 512 # Max allowed memory in MB
     timeout: 300 # Max allowed runtime in seconds
     name: {{name}}-func1
@@ -27,7 +27,7 @@ functions:
       SOME_ENV: ${self:custom.env.someEnv}
 
   func2:
-    description: FIXME Lambda to do XXX
+    description: FIXME Lambda to do XXX (${opt:stage})
     memorySize: 512 # Max allowed memory in MB
     timeout: 300 # Max allowed runtime in seconds
     name: {{name}}-func2
@@ -36,6 +36,8 @@ functions:
       SOME_ENV: ${self:custom.env.someEnv}
 
 resources:
+  Description: {{name}} (${opt:stage})
+
   Resources:
     # Delete CloudWatch logs after 30 days
     #
