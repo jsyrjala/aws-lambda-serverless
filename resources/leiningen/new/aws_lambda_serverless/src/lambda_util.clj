@@ -1,4 +1,5 @@
 (ns {{name}}.lambda-util
+  "Utility code for AWS Lambda"
   (:require [clojure.tools.logging :as log]
             [clojure.string :as string]
             [clojure.main :refer [demunge]]
