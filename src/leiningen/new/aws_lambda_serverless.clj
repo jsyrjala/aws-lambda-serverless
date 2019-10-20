@@ -26,6 +26,7 @@
              ["serverless.yml" (render "serverless.yml" data)]
              ["dev.yml"        (render "dev.yml" data)]
              ["prod.yml"       (render "prod.yml" data)]
+             ["package.json"   (render "package.json" data)]
 
              ["resources/logback.xml" (render "resources/logback.xml" data)]
 

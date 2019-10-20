@@ -1,0 +1,7 @@
+{
+  "name": "{{name}}",
+  "version": "0.1.0",
+  "devDependencies": {
+    "serverless-scriptable-plugin": "1.0.3"
+  }
+}

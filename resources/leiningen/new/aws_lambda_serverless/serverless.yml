@@ -4,6 +4,9 @@ service: {{name}}
 
 frameworkVersion: ">=1.2.0 <2.0.0"
 
+plugins:
+  - serverless-scriptable-plugin
+
 provider:
   name: aws
   runtime: java8
@@ -20,6 +23,8 @@ package:
 
 custom:
   env: ${file(${opt:stage}.yml)}
+  scriptHooks:
+    before:package:createDeploymentArtifacts: lein uberjar
 
 functions:
   func1:
