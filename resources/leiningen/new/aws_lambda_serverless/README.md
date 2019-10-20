@@ -36,9 +36,14 @@ lein run < event.json
 
 AWS Lambdas are managed with [Serverless](https://serverless.com/) framework.
 
-Creating stack
+Install serverless dependency:
 ```
 npm i -g serverless
+```
+
+Creating stack
+```
+npm install
 lein uberjar
 serverless deploy -v --stage dev
 ```
